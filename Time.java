@@ -1,9 +1,23 @@
 public class Time
 {
   // TODO: Part A - put your attributes here
-
+  private int hours;
+  private int minutes;
+  private int seconds;
 
   // TODO: Part B - create your non-default constructor
+
+  public Time(int h, int m, int s)
+  {
+    hours = h;
+    minutes = m;
+    seconds = s;
+  }
+
+  public Time()
+  {
+    this(0,0,0);
+  }
   /**
   * Precondition: The number of hours is between 0 and 23 inclusive.
   * The number of minutes and seconds is between 0 and 59 inclusive.
@@ -31,7 +45,7 @@ public class Time
   // TODO: Part E - complete the toString method; use the pad method as part of your solution
   public String toString()
   {
-    return null;
+    return pad(hours) + ":" + pad(minutes) + ":" + pad(seconds);
   }
 
   // TODO: Part F - write the tick method
